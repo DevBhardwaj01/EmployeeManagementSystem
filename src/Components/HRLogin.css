@@ -1,0 +1,485 @@
+.header {
+  height: 90px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 34px;
+}
+
+.hrLogo{
+  height: 45px;
+  width: auto;
+}
+
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(134, 130, 130, 0.818);
+  background-color: white;
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: black;
+}
+
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+
+/* hover effect on button width */
+.Btn:hover {
+  background-image: linear-gradient(
+    144deg,
+    #e6ff05,
+    rgb(114, 227, 114),
+    rgb(234, 229, 88) 40%,
+    #feb901,
+    #df5a00
+  );
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 20px;
+}
+
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  color: black;
+  transition-duration: 0.3s;
+  padding-right: 10px;
+}
+
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px, 2px);
+}
+
+.TaskSection {
+  background-color: #242424;
+  width: 100%;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskContainer {
+  height: auto;
+  width: 78vw;
+  border: 1px solid white;
+  border-radius: 15px;
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input-container {
+  position: relative;
+  margin: 50px auto;
+  width: 100%;
+}
+
+.input-container input[type="text"] {
+  font-size: 1.15em;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 5px 10px;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-container input {
+  color: white;
+}
+
+.input-container .label {
+  position: absolute;
+  top: 0;
+  left: 6px;
+  color: white;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="text"]:user-valid ~ .label {
+  top: -20px;
+  font-size: 16px;
+  color: #feb901;
+}
+
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #feb901;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"] .underline {
+  transform: scaleX(1);
+}
+
+.input {
+  border: 2px solid transparent;
+  width: 19em;
+  height: 2.5em;
+  padding-left: 0.8em;
+  outline: none;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.input:hover,
+.input:focus {
+  border: 2px solid rgb(114, 227, 114);
+  box-shadow: 0px 0px 0px 7px #feb901;
+  background-color: white;
+}
+
+.input-date {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.inputDesc {
+  display: flex;
+  flex-direction: column;
+}
+
+#TaskDesc {
+  padding: 14px;
+  color: white;
+}
+
+.input-date .label,
+.inputDesc .label {
+  color: white;
+  margin-bottom: 12px;
+}
+
+.select-date {
+  border: 2px solid transparent;
+  width: 100%;
+  height: 2.5em;
+  padding-left: 0.3em;
+  outline: none;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+#TaskDesc {
+  background: transparent;
+}
+
+.SubmitBtn {
+  align-items: center;
+  background-image: linear-gradient(
+    144deg,
+    #e6ff05,
+    rgb(114, 227, 114),
+    rgb(234, 229, 88) 40%,
+    #feb901,
+    #df5a00
+  );
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  margin-top: 38px;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.SubmitBtn:active,
+.SubmitBtn:hover {
+  outline: 0;
+  box-shadow: 0 0 30px 5px #feb901;
+}
+
+.SubmitBtn span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  transition: 300ms;
+}
+
+.SubmitBtn:hover span {
+  background: none;
+  color: black;
+}
+
+.SubmitBtn:active {
+  transform: scale(0.9);
+}
+
+.clickme {
+  position: relative;
+  padding: 10px 28px;
+  border-radius: 7px;
+  border: 1px solid #feb901;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.clickme:hover {
+  background-image: linear-gradient(
+    144deg,
+    #e6ff05,
+    rgb(114, 227, 114),
+    rgb(234, 229, 88) 40%,
+    #feb901,
+    #df5a00
+  );
+  box-shadow: 0 0 30px 5px #feb901;
+  color: #242424;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.clickme:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.clickme::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.clickme:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+.EmployeeTaskSec {
+  height: 140px;
+  width: 78vw;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+table {
+  border: 1px solid white;
+  width: 78vw;
+}
+
+th {
+  border: 1px solid white;
+  padding: 2px 10px;
+  text-align: left;
+}
+
+tr {
+  color: white;
+}
+
+td {
+  border: 1px solid white;
+  padding: 2px 10px;
+}
+
+.userSearchSection {
+  position: relative;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.userStats h3 {
+  background: white;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  text-align: center;
+}
+
+.userSearchSection > .input-container {
+  margin: 20px;
+}
+
+.wave-group {
+  position: relative;
+}
+
+.wave-group #input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+
+.wave-group #input:focus {
+  outline: none;
+}
+
+.wave-group .label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+}
+
+.wave-group .label-char {
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * 0.05s);
+}
+
+.wave-group #input:focus ~ label .label-char,
+.wave-group #input:valid ~ label .label-char {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #5264ae;
+}
+
+.wave-group .bar {
+  position: relative;
+  display: block;
+  width: 200px;
+}
+
+.wave-group .bar:before,
+.wave-group .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264ae;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.wave-group .bar:before {
+  left: 50%;
+}
+
+.wave-group .bar:after {
+  right: 50%;
+}
+
+.wave-group #input:focus ~ .bar:before,
+.wave-group #input:focus ~ .bar:after {
+  width: 50%;
+}

@@ -1,0 +1,205 @@
+@media screen and (max-width: 1258px) {
+  .gradient-border {
+    width: 200px;
+    margin-bottom: 22px;
+  }
+  .TaskSec {
+    height: auto;
+  }
+  .AcceptBtn {
+    width: 264px;
+  }
+  .card,
+  .GivenTask {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .LoginContainer {
+    max-height: 385px;
+    max-width: 345px;
+  }
+  .LoginContainer h1 {
+    font-size: 1.5rem;
+  }
+  .LoginSection {
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    flex-direction: column;
+  }
+  .form__group {
+    max-width: 266px;
+  }
+  .form__field {
+    max-width: 250px;
+  }
+  .buttonSection {
+    width: 100%;
+  }
+
+  .TaskInfo {
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+  }
+  .gradient-border {
+    width: 30vw;
+  }
+
+  .ActiveTask {
+    grid-template-columns: auto auto;
+  }
+  .card,
+  .GivenTask {
+    width: 300px;
+  }
+
+  /* HRLogin.css */
+  .taskContainer {
+    flex-direction: column;
+    width: 82%;
+  }
+  .TaskActionCont {
+    padding-bottom: 20px;
+  }
+  .InputSec {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 681px) {
+  .inputContainer {
+    max-width: 280px;
+  }
+  #TaskDesc {
+    width: 310px;
+    height: 170px;
+  }
+  .EmployeeTaskSec {
+    overflow: scroll;
+  }
+  .ActiveTask {
+    grid-template-columns: auto;
+    width: 100%;
+  }
+  .gradient-border {
+    width: 89vw;
+    max-height: 72px;
+  }
+  .TaskInfo {
+    grid-template-columns: auto;
+    justify-content: center;
+    width: 100%;
+  }
+  .taskContainer2 {
+    width: 90vw;
+  }
+  .GivenTask {
+    width: 90vw;
+  }
+  .card {
+    width: 100em;
+  }
+  .AcceptBtn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position-area: center;
+  }
+  .AcceptBtn::before {
+    max-height: 100%;
+  }
+  .taskAction {
+    position: relative;
+    justify-content: space-between;
+  }
+  .completeBtn,
+  .failedBtn {
+    height: 50px;
+  }
+  .num{
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .LoginContainer {
+    max-height: 365px;
+    max-width: 285px;
+  }
+  .LoginContainer h1 {
+    font-size: 1.4rem;
+  }
+  .LoginSection {
+    max-width: 242px;
+  }
+  .form__group {
+    max-width: 226px;
+  }
+  .form__field {
+    max-width: 210px;
+  }
+  .buttonSection {
+    width: 100%;
+  }
+  .btn {
+    max-width: 120px;
+  }
+  #searchInput {
+    width: 182px;
+  }
+  #search {
+    width: 82px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header{
+    padding: 0px 25px;
+  }
+  #TaskDesc {
+    width: 73vw;
+  }
+  .InputSec {
+    width: 73vw;
+  }
+  #logoutbtn {
+    width: 38px;
+    height: 38px;
+  }
+  #inputContainer {
+    width: auto;
+  }
+  .userSearchSection {
+    flex-direction: column;
+  }
+  #submitbtn {
+    min-width: 116px;
+    height: 42px;
+  }
+  #submitbtn span {
+    font-size: 15px;
+    display: contents;
+    color: black;
+  }
+  .completeBtn{
+    width: 125px;
+  }
+  .failedBtn{
+    width: 100px;
+  }
+  .completeBtn span,.failedBtn span{
+    font-size: 0.72rem;
+  }
+  .employeeLogo {
+    font-size: 1.3rem;
+  }
+  .Btn{
+    width: 40px;
+    height: 40px;
+  }
+}

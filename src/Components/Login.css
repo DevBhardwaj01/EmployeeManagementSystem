@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Container {
+  height: 100vh;
+  width: 100%;
+  background-image: url("./digital-art-moon-wallpaper.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoginContainer {
+  height: 480px;
+  width: 416px;
+  background: rgba(255, 255, 255, 0.17);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(6.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  padding: 40px 0px;
+  background-image: url(https://img.freepik.com/free-photo/abstract-shapes-exploding-chaotic-colorful-motion-generated-by-ai_188544-30465.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.LoginSection {
+  height: 300px;
+  width: 282px;
+}
+
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 300px;
+  margin-bottom: 12px;
+  /* max-width: 300px; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 285px;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: 0;
+  font-size: 15px;
+  color: #fff;
+  padding: 8px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: black;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #7a124b, #ef3872);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #ef3872;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+
+.passEye {
+  scale: 1.2;
+  cursor: pointer;
+  position: relative;
+  right: 16px;
+}
+
+.buttonSection{
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 130px;
+  height: 40px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 16px;
+  background-color: #171717;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  border-radius: 5px;
+  transform: translateY(-10px);
+  box-shadow: 0 7px 0 -2px #f85959, 0 15px 0 -4px #39a2db,
+    0 16px 10px -3px #39a2db;
+}
+
+.btn:active {
+  transition: all 0.2s;
+  transform: translateY(-5px);
+  box-shadow: 0 2px 0 -2px #f85959, 0 8px 0 -4px #39a2db,
+    0 12px 10px -3px #39a2db;
+}

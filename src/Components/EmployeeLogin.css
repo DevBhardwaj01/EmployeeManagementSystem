@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200");
+
+body {
+  background: #242424;
+}
+.header2 {
+  height: 90px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  align-items: center;
+}
+
+.employeeLogo {
+  width: auto;
+  color: white;
+}
+
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(134, 130, 130, 0.818);
+  background-color: white;
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: black;
+}
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+  background-image: linear-gradient(
+    144deg,
+    #e6ff05,
+    rgb(114, 227, 114),
+    rgb(234, 229, 88) 40%,
+    #feb901,
+    #df5a00
+  );
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 20px;
+}
+
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  color: black;
+  transition-duration: 0.3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px, 2px);
+}
+
+.TaskSec {
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskContainer2 {
+  height: auto;
+  width: 92vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+}
+
+.TaskInfo {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-between;
+  align-items: center;
+  width: 92vw;
+  height: auto;
+  padding: 0px 5px; 
+  margin: 30px 0px;
+}
+
+#box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  flex-direction: column;
+  font-weight: 600;
+  width: 14vw;
+  height: 26vh;
+  color: white;
+  font-family: "Raleway";
+  font-size: 2rem;
+  padding: 45px 8px;
+}
+
+.gradient-border {
+  --borderWidth: 3px;
+  background: #1d1f20;
+  position: relative;
+  width: 260px;
+  padding: 0px 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 170px;
+  border-radius: var(--borderWidth);
+}
+
+.gradient-border:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.num {
+  width: 100%;
+  font-family: "Raleway";
+  font-size: 2rem;
+}
+
+.ActiveTask {
+  display: grid;
+  width: 92vw;
+  justify-content: space-between;
+  grid-template-columns: auto auto auto;
+}
+
+.GivenTask {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
+  width: 350px;
+  height: auto;
+  flex-direction: row;
+}
+
+.card {
+  width: 350px;
+  height: 300px;
+  border-radius: 1rem;
+  padding: 0px 18px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1px;
+  padding-bottom: 16px;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: orange;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.tickbox {
+  position: absolute;
+  top: -13px;
+  height: 28px;
+  width: 30px;
+  border-radius: 50px;
+  right: -10px;
+}
+
+.cardbox {
+  width: 100%;
+}
+
+.headcont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.category {
+  padding: 8px 12px;
+  color: white;
+  background-color: red;
+  border-radius: 16px;
+}
+
+.date {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.TaskTitle {
+  font-size: 1.3rem;
+  text-align: left;
+  margin-top: 16px;
+  color: white;
+}
+
+.TaskDescription {
+  text-align: left;
+  margin-top: 10px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.AcceptBtn {
+  position: absolute;
+  width: 314px;
+  height: 20%;
+  bottom: 14px;
+  border-radius: 4px;
+  display: block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.AcceptBtn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  height: 0;
+  width: 100%;
+  background-color: green;
+  transition: all 0.2s ease-in-out;
+}
+.AcceptBtn:hover.AcceptBtn:before {
+  content: "Accept Task";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-weight: 500;
+}
+.AcceptBtn:hover {
+  color: white;
+}
+
+.taskAction {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: auto;
+  margin-top: 20px;
+}
+
+.completeBtn,.failedBtn{
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 13px;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.completeBtn{
+  width: 144px;
+}
+.failedBtn{
+  width: 110px;
+  background-image: linear-gradient(144deg,#FF9A76, #FF6363 50%,#FF1E62);
+}
+
+.completeBtn:active,.failedBtn:active,
+.completeBtn:hover,.failedBtn:hover{
+  outline: 0;
+}
+
+.completeBtn span,.failedBtn span{
+  background-color: rgb(5, 6, 45);
+  padding: 16px 12px;
+  border-radius: 6px;
+  height: 100%;
+  transition: 300ms;
+}
+
+.completeBtn span{
+  width: 100%;
+}
+.failedBtn span{
+  width: 100%;
+}
+
+.completeBtn:hover span,.failedBtn:hover span{
+  background: none;
+}
+
+.completeBtn:active,.failedBtn:active{
+  transform: scale(0.9);
+}
+
+
+.activeComplete {
+  pointer-events: none;
+  background-color: green;
+}
+
+.activerighttick {
+  background: url(system-solid-31-check-in-check.gif);
+  background-size: cover;
+  background-position: center;
+}
+
+.activewrongtick {
+  background: url(system-solid-29-cross-hover-cross-2.gif);
+  background-size: cover;
+  background-position: center;
+}
+
+.activefailed {
+  pointer-events: none;
+  background-color: grey;
+}
